@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>骨科临床雷达 · 痛点与全球新方案</title>
+<meta name="description" content="创伤、脊柱、关节、运动医学、CMF 五条产线的临床痛点、行业热点与近 6 个月全球骨科新方案，每周一更新。">
+<style>
+:root {
+  --bg: #F4F6F8; --panel: #FFFFFF; --fg: #0F1720; --fg2: #3E4B57; --muted: #5B6875; --line: #E2E7EC; --soft: #EEF1F4;
+  --band: #0F1720; --band-panel: #18232E; --band-line: #263442; --band-fg: #F4F6F8; --band-muted: #B8C2CC; --band-accent: #8FD4CC;
+  --fact: #146C2E; --fact-bg: #E7F6EC; --inf: #9A4A00; --inf-bg: #FFF4E5; --co: #3E4B57; --co-bg: #EEF1F4;
+  --c-trauma: #1D5FD1; --c-spine: #0F7A70; --c-joint: #7A3FD6; --c-sports: #C2560C; --c-cmf: #B8336A;
+  --link: #0F5E59;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0B1117; --panel: #121A22; --fg: #E8EDF2; --fg2: #C3CCD5; --muted: #95A2AE; --line: #24303B; --soft: #1A242E;
+    --band: #060A0E; --band-panel: #101820; --band-line: #1E2A35;
+    --fact: #6FD38F; --fact-bg: #143322; --inf: #F2B266; --inf-bg: #3A2710; --co: #C3CCD5; --co-bg: #22303C;
+    --c-trauma: #6C9BEF; --c-spine: #3DBFB1; --c-joint: #A982F0; --c-sports: #F08A45; --c-cmf: #E9709F;
+    --link: #7FD3CA;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", "Segoe UI", sans-serif; line-height: 1.5; }
+a { color: var(--link); }
+.wrap { max-width: 1280px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 32px); }
+.num { font-variant-numeric: tabular-nums; }
+
+.band { background: var(--band); color: var(--band-fg); }
+.band .wrap { padding-top: 36px; padding-bottom: 28px; display: flex; flex-direction: column; gap: 24px; }
+.band-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; }
+.eyebrow { margin: 0; font-size: 12px; letter-spacing: .08em; color: var(--band-accent); }
+h1 { margin: 6px 0 0; font-size: clamp(24px, 3.4vw, 36px); line-height: 1.3; font-weight: 700; }
+.take { margin: 8px 0 0; font-size: 15px; color: #C9D2DA; max-width: 60rem; }
+.take b { color: var(--band-fg); }
+.updated { display: flex; flex-direction: column; align-items: flex-end; font-size: 13px; color: var(--band-muted); }
+.updated strong { font-size: 18px; color: var(--band-fg); font-weight: 600; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr)); gap: 14px; }
+.kpi { background: var(--band-panel); border: 1px solid var(--band-line); border-radius: 12px; padding: 16px 18px; display: flex; flex-direction: column; gap: 6px; }
+.kpi-l { font-size: 13px; color: var(--band-muted); }
+.kpi-v { font-size: 38px; font-weight: 600; line-height: 1; }
+.kpi-n { font-size: 12px; color: #8C99A6; }
+
+.nav { position: sticky; top: 0; z-index: 5; background: var(--panel); border-bottom: 1px solid var(--line); }
+.nav .wrap { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.tabs { display: flex; gap: 2px; overflow-x: auto; flex: 1 1 auto; scrollbar-width: none; }
+.tab { font: inherit; font-size: 15px; display: inline-flex; align-items: center; gap: 8px; min-height: 50px; padding: 0 14px; background: none; border: 0; border-bottom: 3px solid transparent; color: var(--muted); cursor: pointer; white-space: nowrap; }
+.tab:hover { color: var(--fg); }
+.tab[aria-selected="true"] { color: var(--fg); border-bottom-color: var(--fg); font-weight: 700; }
+.tab .n { font-size: 13px; color: var(--muted); font-weight: 400; }
+.dot { width: 8px; height: 8px; border-radius: 50%; flex: none; display: inline-block; }
+.search { flex: 0 1 260px; min-width: 180px; padding: 8px 0; }
+.search label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.search input { width: 100%; font: inherit; font-size: 14px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--bg); color: var(--fg); }
+
+.main { display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; padding-top: 28px; padding-bottom: 40px; }
+.col { flex: 999 1 600px; min-width: 0; display: flex; flex-direction: column; gap: 16px; }
+.side { flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 16px; }
+.sec-h { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px; }
+h2 { margin: 0; font-size: 20px; font-weight: 700; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; font-size: 12px; color: var(--muted); }
+.sols { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr)); gap: 16px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.card h3 { margin: 0; font-size: 16px; font-weight: 700; }
+.card-n { font-size: 12px; color: var(--muted); }
+.row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; font-size: 12px; color: var(--muted); }
+.pill { display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; padding: 2px 10px; font-weight: 500; color: var(--fg); }
+.date { color: var(--fg2); }
+.prod { margin: 0; font-size: 17px; font-weight: 700; line-height: 1.45; }
+.co { font-size: 13px; color: var(--muted); }
+.txt { margin: 0; font-size: 14px; line-height: 1.7; color: var(--fg2); }
+.pain { background: var(--soft); border-radius: 10px; padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; }
+.pain-t { font-size: 14px; line-height: 1.6; }
+.src { border-top: 1px solid var(--line); padding-top: 10px; }
+.src a, .it a { color: var(--muted); text-underline-offset: 2px; }
+.src a:hover, .it a:hover { color: var(--fg); }
+.tag { border-radius: 999px; padding: 1px 9px; font-size: 12px; white-space: nowrap; }
+.t-fact { color: var(--fact); background: var(--fact-bg); }
+.t-inf { color: var(--inf); background: var(--inf-bg); }
+.t-co { color: var(--co); background: var(--co-bg); }
+.list { display: flex; flex-direction: column; }
+.it { display: flex; flex-direction: column; gap: 6px; padding: 12px 0; border-top: 1px solid var(--line); }
+.it:first-child { border-top: 0; padding-top: 0; }
+.it-t { font-size: 14px; font-weight: 700; }
+.it-d { font-size: 13px; line-height: 1.65; color: var(--fg2); }
+.it a { font-size: 12px; }
+.empty { color: var(--muted); font-size: 14px; padding: 24px 0; }
+.chart { position: relative; }
+.chart svg { display: block; width: 100%; height: auto; }
+.tip { position: absolute; pointer-events: none; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,.12); padding: 4px 8px; font-size: 12px; white-space: nowrap; }
+.tip span { color: var(--muted); }
+
+.foot { padding-bottom: 48px; }
+details { border-top: 1px solid var(--line); padding-top: 16px; font-size: 13px; color: var(--muted); line-height: 1.7; }
+summary { cursor: pointer; color: var(--fg); font-size: 15px; }
+dl { margin: 10px 0 0; display: grid; grid-template-columns: max-content 1fr; gap: 6px 16px; }
+dt { color: var(--fg); }
+dd { margin: 0; }
+.credit { margin-top: 16px; font-size: 12px; color: var(--muted); }
+@media (max-width: 520px) {
+  dl { grid-template-columns: 1fr; } dt { margin-top: 6px; }
+  .band .wrap { padding-top: 28px; padding-bottom: 20px; gap: 18px; }
+  .updated { align-items: flex-start; flex-direction: row; gap: 8px; }
+  .updated strong { font-size: 13px; }
+  .kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .kpi { padding: 12px; gap: 4px; }
+  .kpi-l { font-size: 12px; }
+  .kpi-v { font-size: 28px; }
+  .kpi-n { display: none; }
+  .search { flex: 1 1 100%; padding-top: 0; }
+}
+</style>
+</head>
+<body>
+<header class="band">
+  <div class="wrap">
+    <div class="band-top">
+      <div>
+        <p class="eyebrow">ORTHO RADAR · 骨科临床雷达</p>
+        <h1>骨科临床痛点 × 全球新方案</h1>
+        <p class="take" id="take"></p>
+      </div>
+      <div class="updated"><span>数据更新</span><strong class="num" id="updated"></strong></div>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><span class="kpi-l">近 6 个月新方案</span><span class="kpi-v num" id="k-sol">—</span><span class="kpi-n">FDA / NMPA / CE 获批、上市与临床进展</span></div>
+      <div class="kpi"><span class="kpi-l">临床痛点</span><span class="kpi-v num" id="k-pain">—</span><span class="kpi-n">文献与学会资料，标注事实 / 推断</span></div>
+      <div class="kpi"><span class="kpi-l">行业热点</span><span class="kpi-v num" id="k-hot">—</span><span class="kpi-n">财报、监管动态与行业综述</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="nav" aria-label="产线">
+  <div class="wrap">
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <div class="search"><label for="q">搜索产品、公司或痛点</label><input id="q" type="search" placeholder="搜索产品、公司或痛点"></div>
+  </div>
+</nav>
+
+<div class="wrap main">
+  <section class="col" aria-labelledby="sol-h">
+    <div class="sec-h">
+      <h2 id="sol-h">全球最新解决方案</h2>
+      <div class="legend"><span class="tag t-co">企业表述</span><span>原文直接说明痛点</span><span class="tag t-inf">推断</span><span>由产品设计归纳</span></div>
+    </div>
+    <div class="sols" id="sols"></div>
+  </section>
+  <aside class="side">
+    <section class="card" aria-labelledby="m-h">
+      <div><h3 id="m-h">每月新增方案</h3><span class="card-n">按获批、上市或公告月份计，随产线切换</span></div>
+      <div class="chart" id="chart"></div>
+    </section>
+    <section class="card" aria-labelledby="p-h">
+      <div class="sec-h"><h3 id="p-h">临床痛点</h3><span class="card-n">文献 · 学会资料</span></div>
+      <div class="list" id="pains"></div>
+    </section>
+    <section class="card" aria-labelledby="h-h">
+      <div class="sec-h"><h3 id="h-h">行业热点</h3><span class="card-n">财报 · 监管 · 综述</span></div>
+      <div class="list" id="hots"></div>
+    </section>
+  </aside>
+</div>
+
+<footer class="wrap foot">
+  <details>
+    <summary>口径说明</summary>
+    <dl>
+      <dt>收录范围</dt><dd>创伤、脊柱、关节、运动医学、CMF（颅颌面）五条产线；全球范围，优先 FDA、NMPA、CE 等监管来源与企业官方发布。痛点与方案不要求一一对应，但每项方案都写明它针对的痛点。</dd>
+      <dt>时间窗口</dt><dd>以获批、上市或公告日期计，只保留近 6 个月；只能确认到月份的写作年-月。每周一补入新条目、剔除过期条目。</dd>
+      <dt>来源层级</dt><dd>监管公告 / 企业官方 &gt; 企业新闻稿 &gt; 行业媒体 &gt; 二手转述；每条注明层级，二手来源建议回查原文。</dd>
+      <dt>依据标注</dt><dd>痛点与热点中的“事实”为文献或官方数据，“推断”为趋势归纳；方案中的“企业表述”为原文所述痛点，“推断”为根据产品设计归纳。没有证据时不写精确数字。</dd>
+      <dt>未收录</dt><dd>仅有研发或融资消息、无监管或临床进展的项目；单纯的规格扩展；未能确认具体产品的中国创新医疗器械审批。</dd>
+    </dl>
+    <p class="credit">资料整理自公开来源，仅供行业研究参考，不构成医疗或投资建议。</p>
+  </details>
+</footer>
+
+<script id="ob-data" type="application/json">{"updated": "2026-11-09", "solutions": [{"id": "T-01", "line": "创伤", "date": "2026-10-27", "product": "PNP 儿童股骨逆行髓内钉系统", "company": "OrthoPediatrics", "region": "美国", "event": "FDA 510(k) + 首例植入", "what": "按儿童解剖设计：创伤用解剖型钉、畸形矫正用直钉，直径 7–11 mm；2026 年有限上市，2027 年扩大商业化", "pain": "儿童股骨骨折与畸形矫正缺少按儿童解剖设计的逆行髓内钉", "pain_basis": "企业表述", "source_tier": "企业新闻稿", "source_name": "GlobeNewswire / Yahoo Finance", "url": "https://finance.yahoo.com/healthcare/articles/orthopediatrics-announces-fda-510-k-200500983.html"}, {"id": "T-02", "line": "创伤", "date": "2026-09-22", "product": "VOLT 锁定接骨板 4 个新系统（踝、膝、肩）", "company": "DePuy Synthes（J&J）", "region": "美国", "event": "新品发布（OTA 2026）", "what": "以 CT 解剖数据与机器学习（MOSAIC）确定板形，覆盖踝、膝、肩等常见且难度高的骨折部位", "pain": "通用板形与个体解剖贴合不佳，复杂骨折固定难度高", "pain_basis": "推断", "source_tier": "企业官方", "source_name": "J&J MedTech 新闻稿", "url": "https://www.jnjmedtech.com/en-US/news-events/depuy-synthes-showcases-next-generation-trauma-innovations-ota-2026"}, {"id": "T-03", "line": "创伤", "date": "2026-09-22", "product": "MAXFRAME AUTOSTRUT（蓝牙版）多轴矫形外固定", "company": "DePuy Synthes（J&J）", "region": "美国", "event": "美国商业化", "what": "支柱自动调整 + 实时远程监测与治疗管理，用于复杂肢体重建", "pain": "外固定矫形依赖手动调整支柱，依从性与随访管理难", "pain_basis": "企业表述", "source_tier": "企业官方", "source_name": "J&J MedTech 新闻稿", "url": "https://www.jnjmedtech.com/en-US/news-events/depuy-synthes-showcases-next-generation-trauma-innovations-ota-2026"}, {"id": "T-04", "line": "创伤", "date": "2026-09-08", "product": "ActivaScrew Cannulated COM 可吸收加压空心钉", "company": "Bioretec", "region": "美国", "event": "FDA 510(k)", "what": "可吸收加压空心螺钉，用于手、前臂及足踝非骨干部位骨折、截骨、关节融合与植骨固定", "pain": "金属内固定可能需二次手术取出", "pain_basis": "推断", "source_tier": "行业媒体", "source_name": "Ortho Spine News", "url": "https://orthospinenews.com/2026/09/08/bioretec-receives-fda-510k-clearance-for-its-activascrew-cannulated-com-bioabsorbable-compression-screw/"}, {"id": "T-05", "line": "创伤", "date": "2026-08-17", "product": "TITAN 掌指骨髓内钉系统", "company": "Medartis", "region": "美国", "event": "美国商业上市（FDA 510(k) K253412）", "what": "以髓内固定替代板钉，治疗掌骨与指骨骨折", "pain": "手部板钉固定软组织剥离多、易刺激肌腱", "pain_basis": "推断", "source_tier": "行业媒体", "source_name": "Orthogate 行业日报", "url": "https://www.orthogate.org/medtech-innovation/industry/84683-orthopaedic-industry-daily-briefing-2026-08-17"}, {"id": "T-06", "line": "创伤", "date": "2026-07", "product": "金属增材制造匹配式长段骨缺损修复体", "company": "北京爱康宜诚", "region": "中国", "event": "NMPA 注册（国械注准20263131516）", "what": "增材制造、按缺损匹配的长段骨缺损修复体", "pain": "长段骨缺损重建缺少与缺损匹配的结构性植入物", "pain_basis": "推断", "source_tier": "监管公告（转载）", "source_name": "国家药监局 2026 年 7 月注册公告（中国质量新闻网转载）", "url": "https://www.cqn.com.cn/zj/content/2026-08/20/content_9169483.htm"}, {"id": "S-01", "line": "脊柱", "date": "2026-10", "product": "NextMR（MRI 生成三维骨骼可视化）", "company": "MRI2CT", "region": "美国", "event": "FDA 510(k)", "what": "AI 平台，由常规 MRI 生成脊柱三维骨骼可视化", "pain": "术前为看清骨性结构需额外 CT（辐射、费用）", "pain_basis": "推断", "source_tier": "行业媒体", "source_name": "Becker's Spine Review", "url": "https://www.beckersspine.com/spinal-tech/spine-devices-that-won-fda-nods-in-2026/"}, {"id": "S-02", "line": "脊柱", "date": "2026-10", "product": "prodisc C Nova 颈椎人工椎间盘（两节段）", "company": "Centinel Spine", "region": "美国", "event": "FDA 批准两节段适应症", "what": "颈椎全椎间盘置换扩展至两节段使用", "pain": "颈椎融合后活动度丢失、邻近节段退变", "pain_basis": "推断", "source_tier": "行业媒体", "source_name": "Today's Medical Developments 10 月监管汇总", "url": "https://todaysmedicaldevelopments.com/news/regulatory-roundup-october-2026"}, {"id": "S-09", "line": "脊柱", "date": "2026-10", "product": "CORUS PCSS 3D-T 颈椎后路稳定系统", "company": "Providence Medical Technology", "region": "美国", "event": "FDA 510(k)", "what": "3D 打印多孔钛小关节植入物 + 一体化皮质骨螺钉，双侧小关节固定，作为 C3–C7 颈椎后路融合的辅助", "pain": "多节段 ACDF 术后假关节（不融合）问题持续存在", "pain_basis": "企业表述", "source_tier": "行业媒体", "source_name": "Becker's Spine Review / Orthogate", "url": "https://www.beckersspine.com/spinal-tech/fda-clears-providence-medical-technologys-3d-printed-cervical-fusion-implant/"}, {"id": "S-10", "line": "脊柱", "date": "2026-10", "product": "Sonopet 3 超声骨组织去除系统", "company": "Stryker", "region": "美国", "event": "FDA 510(k) + 美国全面上市", "what": "压电超声碎化、乳化并吸除骨与软组织，新增 Pulse Control 在连续切骨与脉冲软组织乳化间切换，用于脊柱、骨肿瘤与神经外科", "pain": "高速磨钻存在回弹/打滑，易伤及硬膜袖等周围组织，骨屑需持续手动冲吸", "pain_basis": "企业表述", "source_tier": "行业媒体", "source_name": "Orthogate（引 Ortho Spine News 2026-10-14）", "url": "https://www.orthogate.org/medtech-innovation/products/84816-stryker-sonopet-3-ultrasonic-system-2026-10-15"}, {"id": "S-05", "line": "脊柱", "date": "2026-09-07", "product": "PERLA TL 导航应用（Op.n 机器人平台）", "company": "Spineart / eCential Robotics", "region": "美国", "event": "FDA 510(k)（K261205）", "what": "胸腰椎内固定器械与导航、机器人辅助平台打通", "pain": "置钉精度依赖透视与经验，术中辐射暴露", "pain_basis": "推断", "source_tier": "行业媒体", "source_name": "Orthogate 行业日报", "url": "https://www.orthogate.org/medtech-innovation/industry/84727-orthopaedic-industry-daily-briefing-2026-09-07"}, {"id": "S-03", "line": "脊柱", "date": "2026-09", "product": "iFuse Granite Onyx", "company": "SI-BONE", "region": "美国", "event": "FDA 510(k)", "what": "面向骨量受损患者的融合固定，公司首个用于骨盆以外的此类产品", "pain": "骨量受损患者内固定把持力不足", "pain_basis": "推断", "source_tier": "行业媒体", "source_name": "Becker's Spine Review", "url": "https://www.beckersspine.com/spinal-tech/spine-devices-that-won-fda-nods-in-2026/"}, {"id": "S-04", "line": "脊柱", "date": "2026-09", "product": "Riva Anchor 脊柱骨盆固定系统", "company": "Xenix Medical", "region": "美国", "event": "FDA 510(k)", "what": "首个获 FDA 纳米技术认定的脊柱骨盆固定系统；同月 Riva 螺钉杆部加入 NanoACTIV 表面", "pain": "长节段及骨盆固定的骨整合不足、松动", "pain_basis": "推断", "source_tier": "行业媒体", "source_name": "Becker's Spine Review", "url": "https://www.beckersspine.com/spinal-tech/spine-devices-that-won-fda-nods-in-2026/"}, {"id": "S-06", "line": "脊柱", "date": "2026-06-23", "product": "VersaLift 可撑开椎间融合器", "company": "Life Spine", "region": "美国", "event": "FDA 510(k)", "what": "起始高度 6 mm，原位撑开，最多 15° 前凸矫正，用于 TLIF/PLIF", "pain": "微创入路空间受限、需牵拉神经", "pain_basis": "企业表述", "source_tier": "行业媒体", "source_name": "Becker's Spine Review", "url": "https://www.beckersspine.com/spinal-tech/life-spine-minimally-invasive-implant-earns-fda-clearance/"}, {"id": "S-07", "line": "脊柱", "date": "2026-06-16", "product": "Acorn 3D 术前矫形规划软件", "company": "Mighty Oak Medical", "region": "美国", "event": "FDA 许可", "what": "三维术前矫形规划", "pain": "脊柱矫形术前规划复杂、依赖经验", "pain_basis": "推断", "source_tier": "行业媒体", "source_name": "Becker's Spine Review", "url": "https://www.beckersspine.com/spinal-tech/spine-devices-that-won-fda-nods-in-2026/"}, {"id": "S-08", "line": "脊柱", "date": "2026-06-15", "product": "ION-L 腰椎小关节固定系统", "company": "SurGenTec", "region": "美国", "event": "FDA 510(k)", "what": "微创腰椎小关节固定", "pain": "传统椎弓根钉固定创伤较大", "pain_basis": "推断", "source_tier": "行业媒体", "source_name": "Ortho Spine News", "url": "https://orthospinenews.com/tag/fda-clearance/"}, {"id": "J-08", "line": "关节", "date": "2026-11-05", "product": "Lantern ASC 手持导航系统", "company": "OrthAlign", "region": "美国", "event": "美国全面上市（髋、膝）", "what": "可复用导航单元 + 一次性 Smart Pack 套件，用于全髋、全膝、单髁及间隙平衡，初次与翻修均可；无需大型设备投入", "pain": "医院与日间手术中心需要导航精度，但难以承担机器人系统的成本与复杂度", "pain_basis": "企业表述", "source_tier": "企业新闻稿", "source_name": "PR Newswire", "url": "https://prnewswire.com/news-releases/orthalign-expands-lantern-asc-across-hip-and-knee-replacement-302930646.html"}, {"id": "J-01", "line": "关节", "date": "2026-11-04", "product": "LANDMARK 非骨水泥全膝", "company": "Smith+Nephew", "region": "美国", "event": "FDA 510(k)，首例完成（Q3 报告披露）", "what": "LANDMARK 膝的非骨水泥版本", "pain": "美国膝关节市场正转向非骨水泥固定", "pain_basis": "企业表述", "source_tier": "企业官方（SEC 披露）", "source_name": "Smith+Nephew Q3 2026 交易更新（6-K）", "url": "https://www.sec.gov/Archives/edgar/data/0000845982/000110465926122324/snn-20261104x6k.htm"}, {"id": "J-07", "line": "关节", "date": "2026-10-02", "product": "AltiVate Reverse 关节盂球（RAVN 技术）", "company": "Enovis", "region": "美国", "event": "FDA 510(k)（K263086）", "what": "反式全肩关节盂球组件，模块化锁定设计，可选直径、外移偏心距与下偏心", "pain": "肩袖撕裂关节病、关节盂骨侵蚀患者反肩置换需按个体调整偏心与稳定性", "pain_basis": "推断", "source_tier": "行业媒体", "source_name": "Orthogate", "url": "https://www.orthogate.org/medtech-innovation/products/84818-altivate-reverse-glenosphere-ravn-enovis-2026-10-15"}, {"id": "J-02", "line": "关节", "date": "2026-09-22", "product": "LANDMARK 全膝系统", "company": "Smith+Nephew", "region": "美国", "event": "FDA 510(k) + 首例", "what": "按健康膝解剖与运动设计，可配合 CORI 手持机器人做规划与平衡", "pain": "全膝置换难以在不妥协的前提下恢复解剖", "pain_basis": "企业表述", "source_tier": "企业官方", "source_name": "Smith+Nephew 新闻稿", "url": "https://www.smith-nephew.com/en/news/2026/09/22/fda-510k-clearance-and-first-surgical-case-of-landmark-total-knee-system"}, {"id": "J-03", "line": "关节", "date": "2026-09-10", "product": "N-22 钛肱骨头", "company": "Shoulder Innovations", "region": "美国", "event": "FDA 510(k) + 全面上市", "what": "钛制肱骨头用于解剖型全肩置换，与 1 月获批的 N-22 关节盂球配套", "pain": "金属过敏患者肩关节置换选择少", "pain_basis": "企业表述", "source_tier": "媒体转述", "source_name": "BioPharmaWatch（转述 PR Newswire）", "url": "https://www.biopharmawatch.com/news/SI/shoulder-innovations-fda-clearance-n22-humeral-head-launch"}, {"id": "J-04", "line": "关节", "date": "2026-08-17", "product": "PCK 干骺端锥体", "company": "Maxx Orthopedics", "region": "美国", "event": "美国上市（FDA 510(k)）", "what": "用于翻修全膝中严重干骺端骨缺损（AORI II/III），与 Freedom PCK 翻修膝配套", "pain": "翻修膝骨缺损缺乏结构支撑与生物固定", "pain_basis": "企业表述", "source_tier": "行业媒体", "source_name": "Orthogate 行业日报", "url": "https://www.orthogate.org/medtech-innovation/industry/84683-orthopaedic-industry-daily-briefing-2026-08-17"}, {"id": "J-05", "line": "关节", "date": "2026-07", "product": "骨科关节置换手术导航系统", "company": "北京壹点灵动", "region": "中国", "event": "NMPA 注册（国械注准20263011470）", "what": "关节置换术中导航", "pain": "假体位置与下肢力线精度依赖术者经验", "pain_basis": "推断", "source_tier": "监管公告（转载）", "source_name": "国家药监局 2026 年 7 月注册公告（中国质量新闻网转载）", "url": "https://www.cqn.com.cn/zj/content/2026-08/20/content_9169483.htm"}, {"id": "J-06", "line": "关节", "date": "2026-07", "product": "增材制造髋臼垫块", "company": "重庆云生生物", "region": "中国", "event": "NMPA 注册（国械注准20263131408）", "what": "增材制造髋臼骨缺损垫块", "pain": "髋臼翻修骨缺损重建", "pain_basis": "推断", "source_tier": "监管公告（转载）", "source_name": "国家药监局 2026 年 7 月注册公告（中国质量新闻网转载）", "url": "https://www.cqn.com.cn/zj/content/2026-08/20/content_9169483.htm"}, {"id": "M-01", "line": "运动医学", "date": "2026-10-05", "product": "Integrity 可回缩植入物输送器", "company": "Anika Therapeutics", "region": "美国", "event": "FDA 510(k)（K261869）", "what": "用于软组织固定与肩袖肌腱增强补片植入", "pain": "肩袖增强补片关节镜下植入操作繁琐", "pain_basis": "推断", "source_tier": "行业媒体", "source_name": "Orthogate 行业日报", "url": "https://www.orthogate.org/medtech-innovation/industry/84791-orthopaedic-industry-daily-briefing-2026-10-05"}, {"id": "M-02", "line": "运动医学", "date": "2026-09-29", "product": "GelrinC 无细胞水凝胶（膝局灶软骨缺损）", "company": "Regentis Biomaterials", "region": "美国", "event": "临床进展（FDA 关键性试验推进）", "what": "无细胞水凝胶植入物，修复膝关节局灶软骨缺损", "pain": "局灶软骨缺损的修复手段有限", "pain_basis": "推断", "source_tier": "行业媒体", "source_name": "Becker's Spine Review", "url": "https://www.beckersspine.com/biologics/6-spine-orthopedic-biologics-launching-in-2026/"}, {"id": "M-06", "line": "运动医学", "date": "2026-09-04", "product": "ArthroTAK 无缝线软组织–骨固定平台（扩展适应症）", "company": "ArthroTAK", "region": "美国", "event": "FDA 510(k)（扩展适应症）", "what": "PEEK 无缝线固定植入物由肩部（肱二头肌腱固定）扩展到膝关节，首个为常配合 ACL 重建的外侧关节外肌腱固定术（LET）", "pain": "缝线–肌腱界面是软组织固定最常见的失效部位", "pain_basis": "企业表述", "source_tier": "行业媒体", "source_name": "OrthoTW（转载企业新闻稿）", "url": "https://orthotw.com/2026/09/arthrotak-receives-fda-510-k-clearance-for-expanded-indications-extending-sutureless-fixation-platform-across-the-body"}, {"id": "M-04", "line": "运动医学", "date": "2026-08-20", "product": "Chondrograft 3D 打印合成软骨支架", "company": "Nanochon", "region": "巴拿马 / 加拿大", "event": "临床进展（首次人体研究获批）", "what": "现货型 3D 打印纳米复合软骨支架，治疗膝关节局灶软骨缺损", "pain": "微骨折、异体骨软骨移植之外缺少现货再生方案", "pain_basis": "企业表述", "source_tier": "行业媒体", "source_name": "Orthogate 行业日报", "url": "https://www.orthogate.org/medtech-innovation/industry/84686-orthopaedic-industry-daily-briefing-2026-08-20"}, {"id": "M-03", "line": "运动医学", "date": "2026-08", "product": "FiberLocker 肩袖增强系统（收购 ZuriMED）", "company": "Stryker", "region": "全球", "event": "并购（签署最终协议）", "what": "往复针把植入纤维嵌入肌腱，使补片与肌腱界面均匀固定", "pain": "肩袖修复缝线切割、再撕裂", "pain_basis": "企业表述", "source_tier": "行业媒体", "source_name": "ORTHOWORLD", "url": "https://www.orthoworld.com/a-look-at-regenerative-solutions-for-tendon-ligament-repair/"}, {"id": "M-05", "line": "运动医学", "date": "2026-07-29", "product": "TESSA 空间手术系统", "company": "Smith+Nephew", "region": "美国", "event": "FDA De Novo（新器械类别）", "what": "把患者三维解剖叠加到实时关节镜画面；首个适应症为 ACL 重建股骨隧道定位", "pain": "ACL 隧道定位依赖术者经验", "pain_basis": "推断", "source_tier": "医生博客（二手）", "source_name": "Dr. Ronak Patel 博客", "url": "https://www.drronakpatel.com/blog-munster-hinsdale-westmont-elmhurst-il/a-new-era-in-acl-surgery-fda-clears-smithnephews-tessa-spatial-surgery-system/"}, {"id": "C-01", "line": "CMF", "date": "2026-09-11", "product": "CraniUS Plate（NeuroPASS 2 构型）", "company": "CraniUS Therapeutics", "region": "美国", "event": "FDA 510(k)（K262874，10 月 7 日公告）", "what": "患者定制颅骨板的新构型，为后续传感接口预留结构", "pain": "颅骨缺损修复需要个体化匹配", "pain_basis": "推断", "source_tier": "企业新闻稿", "source_name": "BioSpace / PR Newswire", "url": "https://www.biospace.com/press-releases/cranius-therapeutics-secures-second-fda-510k-clearance-in-six-weeks-and-earns-u-s-patent-for-neuropass-3-cranial-drug-delivery-system"}, {"id": "C-02", "line": "CMF", "date": "2026-07-29", "product": "CraniUS Plate（NeuroPASS 1）", "company": "CraniUS Therapeutics", "region": "美国", "event": "FDA 510(k)（K261058，9 月 9 日公告）", "what": "按患者解剖设计制造的颅骨成形植入物，用于创伤、肿瘤切除、去骨瓣减压后颅骨缺损", "pain": "颅骨缺损修复需要个体化匹配", "pain_basis": "推断", "source_tier": "企业新闻稿", "source_name": "PR Newswire", "url": "http://www.prnewswire.com/news-releases/cranius-therapeutics-receives-fda-510k-clearance-for-the-cranius-plate-a-patient-specific-cranial-implant-302873691.html"}, {"id": "C-03", "line": "CMF", "date": "2026-07-25", "product": "METICULY 患者定制 CMF 方案", "company": "Meticuly", "region": "美国", "event": "FDA 510(k)（K253206）", "what": "患者定制颅颌面固定方案（二类，接骨板）", "pain": "通用接骨板需术中手工塑形", "pain_basis": "推断", "source_tier": "监管数据库（镜像）", "source_name": "FDA 510(k) 数据（Innolitics 镜像）", "url": "https://fda.innolitics.com/device/K253206"}], "pains": [{"id": "PT-1", "line": "创伤", "kind": "痛点", "title": "骨折相关感染与骨不连代价高", "detail": "长骨骨干骨折合并感染的费用约为无并发症骨折的 1.5–8 倍，骨不连为 2.6–4.3 倍，并显著降低生活质量", "basis": "事实", "source_name": "OTA International 系统综述", "url": "https://doaj.org/article/7e3e09892fbb460b94090be7c289cfb1"}, {"id": "PT-2", "line": "创伤", "kind": "痛点", "title": "老年髋部骨折一年死亡率仍高", "detail": "美国 19.7 万例 65–90 岁髋部骨折队列，一年全因死亡率 11.6%，随年龄升高，男性更高", "basis": "事实", "source_name": "Orthopedics 2026（TriNetX 队列）", "url": "https://researchdiscovery.drexel.edu/esploro/outputs/journalArticle/Understanding-One-year-Mortality-Rates-and-Comorbidity/991022195561404721"}, {"id": "PT-3", "line": "创伤", "kind": "痛点", "title": "髓内钉术后晚期感染难清除", "detail": "晚期感染可沿髓腔、进钉点和锁钉道扩散，只清创骨折端可能残留感染灶", "basis": "事实", "source_name": "J Bone Jt Infect 2026", "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13723046/"}, {"id": "PT-4", "line": "创伤", "kind": "热点", "title": "赋能技术与 AI 进入创伤", "detail": "Stryker 创伤负责人认为赋能技术是核心创伤最大增长机会；DePuy Synthes 计划 2027 年在美推出 AI 辅助复位导航", "basis": "事实", "source_name": "ORTHOWORLD 创伤市场综述", "url": "https://www.orthoworld.com/?p=67819"}, {"id": "PT-5", "line": "创伤", "kind": "热点", "title": "集采后外资按产品决定去留", "detail": "中国集采带来的增量主要流向国产企业，外资多按单个产品权衡是否继续参与", "basis": "事实", "source_name": "ORTHOWORLD 创伤市场综述", "url": "https://www.orthoworld.com/?p=67819"}, {"id": "PS-1", "line": "脊柱", "kind": "痛点", "title": "骨质疏松患者螺钉松动", "detail": "骨质疏松患者腰椎融合术后椎弓根螺钉松动发生率 9–30%，可致腰痛、断钉、假关节甚至后凸", "basis": "事实", "source_name": "Frontiers in Medicine 2026", "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13533679/"}, {"id": "PS-2", "line": "脊柱", "kind": "痛点", "title": "邻近节段病与松动是远期再手术主因", "detail": "单中心 278 例 PLIF：因邻近节段病再手术 4%，因螺钉松动再手术 7.5%", "basis": "事实", "source_name": "Neurocirugía 2021 会议摘要", "url": "https://revistaneurocirugia.com/es-congresos-xxiv-congreso-nacional-sociedad-espanola-139-sesion-raquis-6590-role-of-pedicle-screw-augmentation-79118-pdf"}, {"id": "PS-3", "line": "脊柱", "kind": "热点", "title": "导航、机器人与 AI 影像集中获批", "detail": "近半年获批包括 MRI 生成三维骨骼（MRI2CT）、机器人导航应用（PERLA TL）、术前规划软件（Acorn 3D）", "basis": "推断", "source_name": "Becker's Spine Review 2026 获批清单", "url": "https://www.beckersspine.com/spinal-tech/spine-devices-that-won-fda-nods-in-2026/"}, {"id": "PS-4", "line": "脊柱", "kind": "热点", "title": "运动保留与骨量受损专用固定", "detail": "颈椎人工椎间盘扩展到两节段；面向骨量受损患者的融合固定与纳米表面螺钉陆续获批", "basis": "推断", "source_name": "Becker's Spine Review 2026 获批清单", "url": "https://www.beckersspine.com/spinal-tech/spine-devices-that-won-fda-nods-in-2026/"}, {"id": "PJ-1", "line": "关节", "kind": "痛点", "title": "假体周围感染（PJI）", "detail": "PJI 约占初次髋、膝置换的 1–2%，其中 39–58% 发生在术后第一年", "basis": "事实", "source_name": "AAOS 2026 摘要", "url": "https://index.mirasmart.com/AAOS2026/PDFfiles/AAOS2026-004473.pdf"}, {"id": "PJ-2", "line": "关节", "kind": "热点", "title": "美国膝关节向非骨水泥转移", "detail": "Smith+Nephew 称美国市场持续转向非骨水泥膝，并据此安排 LANDMARK 非骨水泥版上市", "basis": "事实", "source_name": "Smith+Nephew Q1 2026 交易更新", "url": "https://compliance.smith-nephew.com/en/news/2026/05/06/first-quarter-2026-trading-update"}, {"id": "PJ-3", "line": "关节", "kind": "热点", "title": "一体化 AI 全骨科手术机器人（中国）", "detail": "2026 上半年获批的一款平台以一套系统覆盖髋、膝、单髁、脊柱、创伤、运动医学六类术式", "basis": "事实", "source_name": "医疗器械创新网（搜狐转载）", "url": "https://timeline.sohu.com/news/UrwGLBoX7f"}, {"id": "PJ-4", "line": "关节", "kind": "热点", "title": "个性化对线与手持机器人", "detail": "新一代膝假体按解剖与运动设计，并与手持机器人、术中导航配套推出", "basis": "推断", "source_name": "Smith+Nephew 新闻稿", "url": "https://www.smith-nephew.com/en/news/2026/09/22/fda-510k-clearance-and-first-surgical-case-of-landmark-total-knee-system"}, {"id": "PM-1", "line": "运动医学", "kind": "痛点", "title": "肩袖修复再撕裂", "detail": "肩袖修复合并前方稳定术的荟萃分析：再撕裂池化率 12%（95% CI 3.4%–35.0%）", "basis": "事实", "source_name": "JSES Reviews 2026 荟萃分析", "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13636065/"}, {"id": "PM-2", "line": "运动医学", "kind": "热点", "title": "结构性增强降低再撕裂", "detail": "24 项研究荟萃：结构性增强使再撕裂风险降低 35%（RR 0.65），但短期患者报告结局未改善", "basis": "事实", "source_name": "Weill Cornell 收录的 2026 荟萃分析", "url": "https://vivo.weill.cornell.edu/display/pubid41549444"}, {"id": "PM-3", "line": "运动医学", "kind": "热点", "title": "肩袖生物增强商业化加速", "detail": "Smith+Nephew 的肩袖生物诱导植入物保持两位数增长，并收购肌腱缝合技术公司", "basis": "事实", "source_name": "Smith+Nephew Q2 2026（6-K）", "url": "https://www.sec.gov/Archives/edgar/data/0000845982/000165495426007206/a0920p.htm"}, {"id": "PM-4", "line": "运动医学", "kind": "热点", "title": "关节镜空间导航成为新器械类别", "detail": "FDA 以 De Novo 为关节内骨科立体定向导航设立新类别，首个适应症为 ACL 隧道定位", "basis": "事实", "source_name": "Dr. Ronak Patel 博客（二手）", "url": "https://www.drronakpatel.com/blog-munster-hinsdale-westmont-elmhurst-il/a-new-era-in-acl-surgery-fda-clears-smithnephews-tessa-spatial-surgery-system/"}, {"id": "PM-5", "line": "运动医学", "kind": "热点", "title": "软骨再生进入临床验证", "detail": "无细胞水凝胶进入 FDA 关键性试验，3D 打印合成软骨支架获批首次人体研究", "basis": "事实", "source_name": "Orthogate 行业日报", "url": "https://www.orthogate.org/medtech-innovation/industry/84686-orthopaedic-industry-daily-briefing-2026-08-20"}, {"id": "PC-1", "line": "CMF", "kind": "痛点", "title": "通用接骨板需术中手工塑形", "detail": "商品化接骨板为通用形态，术中需按患者解剖手工折弯", "basis": "事实", "source_name": "PMC 综述：3D 打印在颅颌面外科", "url": "https://pmc.ncbi.nlm.nih.gov/articles/11229092"}, {"id": "PC-2", "line": "CMF", "kind": "痛点", "title": "定制 3D 打印器械仍处早期", "detail": "患者定制 3D 打印模型、导板与植入物进入临床仍有不少障碍，FDA 注册过程复杂", "basis": "事实", "source_name": "PMC 综述：3D 打印在颅颌面外科", "url": "https://pmc.ncbi.nlm.nih.gov/articles/11229092"}, {"id": "PC-3", "line": "CMF", "kind": "热点", "title": "患者定制颅颌面植入物平台化", "detail": "定制颅骨板以同一平台连续获批新构型，并预留传感与给药接口", "basis": "推断", "source_name": "BioSpace / PR Newswire", "url": "https://www.biospace.com/press-releases/cranius-therapeutics-secures-second-fda-510k-clearance-in-six-weeks-and-earns-u-s-patent-for-neuropass-3-cranial-drug-delivery-system"}]}</script>
+<script>
+(function () {
+  var DATA = JSON.parse(document.getElementById('ob-data').textContent);
+  var SOL = DATA.solutions || [], PAIN = DATA.pains || [];
+  var LINES = ['创伤', '脊柱', '关节', '运动医学', 'CMF'];
+  var VAR = { '创伤': '--c-trauma', '脊柱': '--c-spine', '关节': '--c-joint', '运动医学': '--c-sports', 'CMF': '--c-cmf' };
+  var colorOf = function (l) { return VAR[l] ? 'var(' + VAR[l] + ')' : 'var(--fg)'; };
+  var state = { line: '全部', q: '' };
+  try { var h = decodeURIComponent(location.hash.slice(1)); if (h === '全部' || LINES.indexOf(h) >= 0) state.line = h; } catch (e) {}
+
+  var el = function (tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+  var dot = function (l) { var d = el('span', 'dot'); d.style.background = colorOf(l); return d; };
+  var tagCls = function (b) { return b === '事实' ? 't-fact' : b === '推断' ? 't-inf' : 't-co'; };
+  var link = function (url, text) { var a = el('a', '', text); if (/^https?:\/\//i.test(String(url))) { a.href = url; a.target = '_blank'; a.rel = 'noopener noreferrer'; } return a; };
+  var inLine = function (r) { return state.line === '全部' || r.line === state.line; };
+  var matchQ = function (r, keys) {
+    if (!state.q) return true;
+    var q = state.q.toLowerCase();
+    return keys.some(function (k) { return String(r[k] || '').toLowerCase().indexOf(q) >= 0; });
+  };
+
+  document.getElementById('updated').textContent = DATA.updated || '';
+
+  var tabs = document.getElementById('tabs');
+  ['全部'].concat(LINES).forEach(function (l) {
+    var b = el('button', 'tab'); b.type = 'button'; b.setAttribute('role', 'tab'); b.dataset.line = l;
+    b.append(dot(l), document.createTextNode(l));
+    var n = el('span', 'n num', String(l === '全部' ? SOL.length : SOL.filter(function (r) { return r.line === l; }).length));
+    b.append(n);
+    b.addEventListener('click', function () { state.line = l; try { history.replaceState(null, '', '#' + encodeURIComponent(l)); } catch (e) {} render(); });
+    tabs.append(b);
+  });
+  document.getElementById('q').addEventListener('input', function (e) { state.q = e.target.value.trim(); render(); });
+
+  function renderSols() {
+    var rows = SOL.filter(inLine).filter(function (r) { return matchQ(r, ['product', 'company', 'pain', 'what', 'event', 'region']); })
+      .slice().sort(function (a, b) { return String(b.date).localeCompare(String(a.date)); });
+    var box = document.getElementById('sols');
+    if (!rows.length) { box.replaceChildren(el('p', 'empty', '没有符合条件的方案。')); return; }
+    box.replaceChildren.apply(box, rows.map(function (r) {
+      var c = el('article', 'card');
+      var top = el('div', 'row');
+      var pill = el('span', 'pill'); pill.style.background = 'color-mix(in srgb, ' + colorOf(r.line) + ' 16%, transparent)';
+      pill.append(dot(r.line), document.createTextNode(r.line));
+      top.append(pill, el('span', 'date num', r.date), el('span', '', r.event));
+      var head = el('div'); head.append(el('h3', 'prod', r.product), el('div', 'co', r.company + ' · ' + r.region));
+      var pain = el('div', 'pain'); var pl = el('div', 'row');
+      pl.append(el('span', '', '针对痛点'), el('span', 'tag ' + tagCls(r.pain_basis), r.pain_basis));
+      pain.append(pl, el('span', 'pain-t', r.pain));
+      var src = el('div', 'row src'); src.append(el('span', '', '来源'), link(r.url, r.source_name), el('span', '', '· ' + r.source_tier));
+      c.append(top, head, el('p', 'txt', r.what), pain, src);
+      return c;
+    }));
+  }
+
+  function renderList(id, kind) {
+    var rows = PAIN.filter(function (r) { return r.kind === kind && inLine(r); }).filter(function (r) { return matchQ(r, ['title', 'detail']); });
+    var box = document.getElementById(id);
+    if (!rows.length) { box.replaceChildren(el('p', 'empty', '暂无条目。')); return; }
+    box.replaceChildren.apply(box, rows.map(function (r) {
+      var it = el('div', 'it'); var m = el('div', 'row');
+      m.append(dot(r.line), el('span', '', r.line), el('span', 'tag ' + tagCls(r.basis), r.basis));
+      it.append(m, el('span', 'it-t', r.title), el('span', 'it-d', r.detail), link(r.url, r.source_name));
+      return it;
+    }));
+  }
+
+  function months() {
+    var ms = SOL.map(function (r) { return String(r.date).slice(0, 7); }).sort();
+    if (!ms.length) return [];
+    var out = [], p = ms[0].split('-').map(Number), e = ms[ms.length - 1].split('-').map(Number), y = p[0], m = p[1];
+    while (y < e[0] || (y === e[0] && m <= e[1])) { out.push(y + '-' + (m < 10 ? '0' : '') + m); m++; if (m > 12) { m = 1; y++; } }
+    return out;
+  }
+
+  function renderChart() {
+    var box = document.getElementById('chart');
+    var NS = 'http://www.w3.org/2000/svg';
+    var rows = months().map(function (mo) { return { m: mo, n: SOL.filter(function (r) { return inLine(r) && String(r.date).slice(0, 7) === mo; }).length }; });
+    box.replaceChildren();
+    if (!rows.length) return;
+    var W = 360, H = 180, L = 28, R = 6, T = 22, B = 26;
+    var max = Math.max(1, Math.max.apply(null, rows.map(function (r) { return r.n; })));
+    var step = max <= 5 ? 1 : max <= 10 ? 2 : 5; var top = Math.ceil(max / step) * step;
+    var y = function (v) { return H - B - (v / top) * (H - B - T); };
+    var bandW = (W - L - R) / rows.length, bw = Math.min(32, bandW * 0.6);
+    var svg = document.createElementNS(NS, 'svg'); svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+    svg.setAttribute('role', 'img');
+    svg.setAttribute('aria-label', '每月新增方案数：' + rows.map(function (r) { return Number(r.m.slice(5)) + '月 ' + r.n; }).join('，'));
+    var mk = function (tag, attrs, text) { var n = document.createElementNS(NS, tag); for (var k in attrs) n.setAttribute(k, attrs[k]); if (text != null) n.textContent = text; svg.append(n); return n; };
+    for (var t = 0; t <= top; t += step) {
+      mk('line', { x1: L, x2: W - R, y1: y(t), y2: y(t), stroke: 'var(--line)' });
+      mk('text', { x: L - 6, y: y(t) + 4, 'text-anchor': 'end', 'font-size': 11, fill: 'var(--muted)' }, String(t));
+    }
+    var color = state.line === '全部' ? 'var(--c-spine)' : colorOf(state.line);
+    var tip = el('div', 'tip'); tip.style.display = 'none';
+    rows.forEach(function (r, i) {
+      var cx = L + bandW * i + bandW / 2;
+      var bar = mk('rect', { x: cx - bw / 2, y: y(r.n), width: bw, height: Math.max(0, y(0) - y(r.n)), rx: 4, fill: color });
+      if (r.n) mk('text', { x: cx, y: y(r.n) - 5, 'text-anchor': 'middle', 'font-size': 11, fill: 'var(--fg)' }, String(r.n));
+      mk('text', { x: cx, y: H - 8, 'text-anchor': 'middle', 'font-size': 11, fill: 'var(--muted)' }, Number(r.m.slice(5)) + '月');
+      bar.addEventListener('pointerenter', function () {
+        tip.replaceChildren(el('span', '', r.m.slice(0, 4) + ' 年 ' + Number(r.m.slice(5)) + ' 月'), el('div', '', r.n + ' 项新方案'));
+        tip.style.display = 'block';
+        var bx = box.clientWidth * (cx / W), tw = tip.offsetWidth;
+        tip.style.left = Math.min(Math.max(0, bx - tw / 2), box.clientWidth - tw) + 'px';
+        tip.style.top = Math.max(0, box.clientWidth * (y(r.n) / W) - 48) + 'px';
+      });
+      bar.addEventListener('pointerleave', function () { tip.style.display = 'none'; });
+    });
+    mk('line', { x1: L, x2: W - R, y1: y(0), y2: y(0), stroke: 'var(--muted)' });
+    box.append(svg, tip);
+  }
+
+  function render() {
+    Array.prototype.forEach.call(tabs.children, function (b) { b.setAttribute('aria-selected', b.dataset.line === state.line ? 'true' : 'false'); });
+    var s = SOL.filter(inLine).length;
+    var p = PAIN.filter(function (r) { return r.kind === '痛点' && inLine(r); }).length;
+    var hh = PAIN.filter(function (r) { return r.kind === '热点' && inLine(r); }).length;
+    document.getElementById('k-sol').textContent = s;
+    document.getElementById('k-pain').textContent = p;
+    document.getElementById('k-hot').textContent = hh;
+    var take = document.getElementById('take'); take.replaceChildren();
+    take.append(document.createTextNode('当前查看「'), el('b', '', state.line), document.createTextNode('」：近 6 个月收录全球新方案 '), el('b', 'num', String(s)),
+      document.createTextNode(' 项，可对照临床痛点 '), el('b', 'num', String(p)), document.createTextNode(' 条与行业热点 '), el('b', 'num', String(hh)),
+      document.createTextNode(' 条。覆盖创伤、脊柱、关节、运动医学、CMF 五条产线，每周一更新。'));
+    renderSols(); renderList('pains', '痛点'); renderList('hots', '热点'); renderChart();
+  }
+  render();
+})();
+</script>
+</body>
+</html>

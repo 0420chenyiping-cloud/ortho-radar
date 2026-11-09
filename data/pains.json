@@ -1,0 +1,27 @@
+[
+  {"id":"PT-1","line":"创伤","kind":"痛点","title":"骨折相关感染与骨不连代价高","detail":"长骨骨干骨折合并感染的费用约为无并发症骨折的 1.5–8 倍，骨不连为 2.6–4.3 倍，并显著降低生活质量","basis":"事实","source_name":"OTA International 系统综述","url":"https://doaj.org/article/7e3e09892fbb460b94090be7c289cfb1"},
+  {"id":"PT-2","line":"创伤","kind":"痛点","title":"老年髋部骨折一年死亡率仍高","detail":"美国 19.7 万例 65–90 岁髋部骨折队列，一年全因死亡率 11.6%，随年龄升高，男性更高","basis":"事实","source_name":"Orthopedics 2026（TriNetX 队列）","url":"https://researchdiscovery.drexel.edu/esploro/outputs/journalArticle/Understanding-One-year-Mortality-Rates-and-Comorbidity/991022195561404721"},
+  {"id":"PT-3","line":"创伤","kind":"痛点","title":"髓内钉术后晚期感染难清除","detail":"晚期感染可沿髓腔、进钉点和锁钉道扩散，只清创骨折端可能残留感染灶","basis":"事实","source_name":"J Bone Jt Infect 2026","url":"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13723046/"},
+  {"id":"PT-4","line":"创伤","kind":"热点","title":"赋能技术与 AI 进入创伤","detail":"Stryker 创伤负责人认为赋能技术是核心创伤最大增长机会；DePuy Synthes 计划 2027 年在美推出 AI 辅助复位导航","basis":"事实","source_name":"ORTHOWORLD 创伤市场综述","url":"https://www.orthoworld.com/?p=67819"},
+  {"id":"PT-5","line":"创伤","kind":"热点","title":"集采后外资按产品决定去留","detail":"中国集采带来的增量主要流向国产企业，外资多按单个产品权衡是否继续参与","basis":"事实","source_name":"ORTHOWORLD 创伤市场综述","url":"https://www.orthoworld.com/?p=67819"},
+
+  {"id":"PS-1","line":"脊柱","kind":"痛点","title":"骨质疏松患者螺钉松动","detail":"骨质疏松患者腰椎融合术后椎弓根螺钉松动发生率 9–30%，可致腰痛、断钉、假关节甚至后凸","basis":"事实","source_name":"Frontiers in Medicine 2026","url":"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13533679/"},
+  {"id":"PS-2","line":"脊柱","kind":"痛点","title":"邻近节段病与松动是远期再手术主因","detail":"单中心 278 例 PLIF：因邻近节段病再手术 4%，因螺钉松动再手术 7.5%","basis":"事实","source_name":"Neurocirugía 2021 会议摘要","url":"https://revistaneurocirugia.com/es-congresos-xxiv-congreso-nacional-sociedad-espanola-139-sesion-raquis-6590-role-of-pedicle-screw-augmentation-79118-pdf"},
+  {"id":"PS-3","line":"脊柱","kind":"热点","title":"导航、机器人与 AI 影像集中获批","detail":"近半年获批包括 MRI 生成三维骨骼（MRI2CT）、机器人导航应用（PERLA TL）、术前规划软件（Acorn 3D）","basis":"推断","source_name":"Becker's Spine Review 2026 获批清单","url":"https://www.beckersspine.com/spinal-tech/spine-devices-that-won-fda-nods-in-2026/"},
+  {"id":"PS-4","line":"脊柱","kind":"热点","title":"运动保留与骨量受损专用固定","detail":"颈椎人工椎间盘扩展到两节段；面向骨量受损患者的融合固定与纳米表面螺钉陆续获批","basis":"推断","source_name":"Becker's Spine Review 2026 获批清单","url":"https://www.beckersspine.com/spinal-tech/spine-devices-that-won-fda-nods-in-2026/"},
+
+  {"id":"PJ-1","line":"关节","kind":"痛点","title":"假体周围感染（PJI）","detail":"PJI 约占初次髋、膝置换的 1–2%，其中 39–58% 发生在术后第一年","basis":"事实","source_name":"AAOS 2026 摘要","url":"https://index.mirasmart.com/AAOS2026/PDFfiles/AAOS2026-004473.pdf"},
+  {"id":"PJ-2","line":"关节","kind":"热点","title":"美国膝关节向非骨水泥转移","detail":"Smith+Nephew 称美国市场持续转向非骨水泥膝，并据此安排 LANDMARK 非骨水泥版上市","basis":"事实","source_name":"Smith+Nephew Q1 2026 交易更新","url":"https://compliance.smith-nephew.com/en/news/2026/05/06/first-quarter-2026-trading-update"},
+  {"id":"PJ-3","line":"关节","kind":"热点","title":"一体化 AI 全骨科手术机器人（中国）","detail":"2026 上半年获批的一款平台以一套系统覆盖髋、膝、单髁、脊柱、创伤、运动医学六类术式","basis":"事实","source_name":"医疗器械创新网（搜狐转载）","url":"https://timeline.sohu.com/news/UrwGLBoX7f"},
+  {"id":"PJ-4","line":"关节","kind":"热点","title":"个性化对线与手持机器人","detail":"新一代膝假体按解剖与运动设计，并与手持机器人、术中导航配套推出","basis":"推断","source_name":"Smith+Nephew 新闻稿","url":"https://www.smith-nephew.com/en/news/2026/09/22/fda-510k-clearance-and-first-surgical-case-of-landmark-total-knee-system"},
+
+  {"id":"PM-1","line":"运动医学","kind":"痛点","title":"肩袖修复再撕裂","detail":"肩袖修复合并前方稳定术的荟萃分析：再撕裂池化率 12%（95% CI 3.4%–35.0%）","basis":"事实","source_name":"JSES Reviews 2026 荟萃分析","url":"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13636065/"},
+  {"id":"PM-2","line":"运动医学","kind":"热点","title":"结构性增强降低再撕裂","detail":"24 项研究荟萃：结构性增强使再撕裂风险降低 35%（RR 0.65），但短期患者报告结局未改善","basis":"事实","source_name":"Weill Cornell 收录的 2026 荟萃分析","url":"https://vivo.weill.cornell.edu/display/pubid41549444"},
+  {"id":"PM-3","line":"运动医学","kind":"热点","title":"肩袖生物增强商业化加速","detail":"Smith+Nephew 的肩袖生物诱导植入物保持两位数增长，并收购肌腱缝合技术公司","basis":"事实","source_name":"Smith+Nephew Q2 2026（6-K）","url":"https://www.sec.gov/Archives/edgar/data/0000845982/000165495426007206/a0920p.htm"},
+  {"id":"PM-4","line":"运动医学","kind":"热点","title":"关节镜空间导航成为新器械类别","detail":"FDA 以 De Novo 为关节内骨科立体定向导航设立新类别，首个适应症为 ACL 隧道定位","basis":"事实","source_name":"Dr. Ronak Patel 博客（二手）","url":"https://www.drronakpatel.com/blog-munster-hinsdale-westmont-elmhurst-il/a-new-era-in-acl-surgery-fda-clears-smithnephews-tessa-spatial-surgery-system/"},
+  {"id":"PM-5","line":"运动医学","kind":"热点","title":"软骨再生进入临床验证","detail":"无细胞水凝胶进入 FDA 关键性试验，3D 打印合成软骨支架获批首次人体研究","basis":"事实","source_name":"Orthogate 行业日报","url":"https://www.orthogate.org/medtech-innovation/industry/84686-orthopaedic-industry-daily-briefing-2026-08-20"},
+
+  {"id":"PC-1","line":"CMF","kind":"痛点","title":"通用接骨板需术中手工塑形","detail":"商品化接骨板为通用形态，术中需按患者解剖手工折弯","basis":"事实","source_name":"PMC 综述：3D 打印在颅颌面外科","url":"https://pmc.ncbi.nlm.nih.gov/articles/11229092"},
+  {"id":"PC-2","line":"CMF","kind":"痛点","title":"定制 3D 打印器械仍处早期","detail":"患者定制 3D 打印模型、导板与植入物进入临床仍有不少障碍，FDA 注册过程复杂","basis":"事实","source_name":"PMC 综述：3D 打印在颅颌面外科","url":"https://pmc.ncbi.nlm.nih.gov/articles/11229092"},
+  {"id":"PC-3","line":"CMF","kind":"热点","title":"患者定制颅颌面植入物平台化","detail":"定制颅骨板以同一平台连续获批新构型，并预留传感与给药接口","basis":"推断","source_name":"BioSpace / PR Newswire","url":"https://www.biospace.com/press-releases/cranius-therapeutics-secures-second-fda-510k-clearance-in-six-weeks-and-earns-u-s-patent-for-neuropass-3-cranial-drug-delivery-system"}
+]
