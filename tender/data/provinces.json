@@ -1,0 +1,316 @@
+{
+ "columns": [
+  {
+   "key": "trauma2023",
+   "label": "创伤 · 3+N 联盟（2023 轮）",
+   "note": "按转载文章所列 2023 轮参与省份"
+  },
+  {
+   "key": "trauma2026",
+   "label": "创伤 · 2026 联动接续",
+   "note": "已发历史数据填报通知的省份"
+  },
+  {
+   "key": "national",
+   "label": "国家组织关节 / 脊柱 / 运动医学 · 本省最新文件",
+   "note": "近 6 个月检索到的执行或清单更新"
+  },
+  {
+   "key": "robotfee",
+   "label": "手术机器人收费落地",
+   "note": "按国家立项指南制定本省价格"
+  }
+ ],
+ "rows": [
+  {
+   "province": "北京",
+   "trauma2023": {
+    "s": "未参与",
+    "src": "转载",
+    "url": "https://www.163.com/dy/article/KV4K11GS0514CG7L.html"
+   }
+  },
+  {
+   "province": "天津",
+   "trauma2023": {
+    "s": "参与",
+    "src": "转载",
+    "url": "https://www.163.com/dy/article/KV4K11GS0514CG7L.html"
+   }
+  },
+  {
+   "province": "河北",
+   "trauma2023": {
+    "s": "参与",
+    "src": "转载",
+    "url": "https://www.163.com/dy/article/KV4K11GS0514CG7L.html"
+   }
+  },
+  {
+   "province": "山西",
+   "trauma2023": {
+    "s": "参与",
+    "src": "转载",
+    "url": "https://www.163.com/dy/article/KV4K11GS0514CG7L.html"
+   },
+   "trauma2026": {
+    "s": "已发填报通知",
+    "d": "2026-06-09",
+    "src": "转载",
+    "url": "https://www.163.com/dy/article/KV4K11GS0514CG7L.html"
+   }
+  },
+  {
+   "province": "内蒙古",
+   "trauma2023": {
+    "s": "参与",
+    "src": "转载",
+    "url": "https://www.163.com/dy/article/KV4K11GS0514CG7L.html"
+   },
+   "trauma2026": {
+    "s": "填报 06-10 至 06-22",
+    "d": "2026-06-10",
+    "src": "转载",
+    "url": "https://www.163.com/dy/article/KV4K11GS0514CG7L.html"
+   }
+  },
+  {
+   "province": "辽宁",
+   "trauma2023": {
+    "s": "参与",
+    "src": "转载",
+    "url": "https://www.163.com/dy/article/KV4K11GS0514CG7L.html"
+   }
+  },
+  {
+   "province": "吉林",
+   "trauma2023": {
+    "s": "参与",
+    "src": "转载",
+    "url": "https://www.163.com/dy/article/KV4K11GS0514CG7L.html"
+   },
+   "national": {
+    "s": "关节接续、运动医学清单（10-13），脊柱清单（09-03）",
+    "d": "2026-10-13",
+    "src": "官方",
+    "url": "http://www.ggzyzx.jl.gov.cn/jyxx/yxcg/hc/202610/t20261013_3678435.html"
+   }
+  },
+  {
+   "province": "黑龙江",
+   "trauma2023": {
+    "s": "参与",
+    "src": "转载",
+    "url": "https://www.163.com/dy/article/KV4K11GS0514CG7L.html"
+   }
+  },
+  {
+   "province": "上海",
+   "trauma2023": {
+    "s": "未参与；本市自行执行（2025-04 通知）",
+    "src": "官方",
+    "url": "https://ybj.sh.gov.cn/qtwj/20250401/d83d109d5bb74f47947c1ba3c2663672.html"
+   }
+  },
+  {
+   "province": "江苏",
+   "trauma2023": {
+    "s": "未参与",
+    "src": "转载",
+    "url": "https://www.163.com/dy/article/KV4K11GS0514CG7L.html"
+   }
+  },
+  {
+   "province": "浙江",
+   "trauma2023": {
+    "s": "未参与；省内接续（征求意见稿）",
+    "src": "官方",
+    "url": "https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web3190/site/attach/0/fbc7f5bc5e3c40548cb27c02ed1337c2.pdf"
+   }
+  },
+  {
+   "province": "安徽",
+   "trauma2023": {
+    "s": "参与",
+    "src": "转载",
+    "url": "https://www.163.com/dy/article/KV4K11GS0514CG7L.html"
+   }
+  },
+  {
+   "province": "福建",
+   "trauma2023": {
+    "s": "参与",
+    "src": "转载",
+    "url": "https://www.163.com/dy/article/KV4K11GS0514CG7L.html"
+   }
+  },
+  {
+   "province": "江西",
+   "trauma2023": {
+    "s": "参与",
+    "src": "转载",
+    "url": "https://www.163.com/dy/article/KV4K11GS0514CG7L.html"
+   }
+  },
+  {
+   "province": "山东",
+   "trauma2023": {
+    "s": "参与",
+    "src": "转载",
+    "url": "https://www.163.com/dy/article/KV4K11GS0514CG7L.html"
+   }
+  },
+  {
+   "province": "河南",
+   "trauma2023": {
+    "s": "参与",
+    "src": "转载",
+    "url": "https://www.163.com/dy/article/KV4K11GS0514CG7L.html"
+   }
+  },
+  {
+   "province": "湖北",
+   "trauma2023": {
+    "s": "参与",
+    "src": "转载",
+    "url": "https://www.163.com/dy/article/KV4K11GS0514CG7L.html"
+   },
+   "national": {
+    "s": "中选清单动态更新（含关节、运动医学）",
+    "d": "2026-10-12",
+    "src": "转载",
+    "url": "https://bj.zhiliaobiaoxun.com/article/118223177"
+   }
+  },
+  {
+   "province": "湖南",
+   "trauma2023": {
+    "s": "参与",
+    "src": "转载",
+    "url": "https://www.163.com/dy/article/KV4K11GS0514CG7L.html"
+   },
+   "robotfee": {
+    "s": "已执行（湘医保发〔2026〕20号）",
+    "d": "2026-09-01",
+    "src": "官方",
+    "url": "https://ybj.hunan.gov.cn/ybj/first113541/firstF/f2113606/202605/t20260514_33977508.html"
+   }
+  },
+  {
+   "province": "广东",
+   "trauma2023": {
+    "s": "参与",
+    "src": "转载",
+    "url": "https://www.163.com/dy/article/KV4K11GS0514CG7L.html"
+   }
+  },
+  {
+   "province": "广西",
+   "trauma2023": {
+    "s": "参与",
+    "src": "转载",
+    "url": "https://www.163.com/dy/article/KV4K11GS0514CG7L.html"
+   }
+  },
+  {
+   "province": "海南",
+   "trauma2023": {
+    "s": "参与",
+    "src": "转载",
+    "url": "https://www.163.com/dy/article/KV4K11GS0514CG7L.html"
+   }
+  },
+  {
+   "province": "重庆",
+   "trauma2023": {
+    "s": "参与",
+    "src": "转载",
+    "url": "https://www.163.com/dy/article/KV4K11GS0514CG7L.html"
+   }
+  },
+  {
+   "province": "四川",
+   "trauma2023": {
+    "s": "参与",
+    "src": "转载",
+    "url": "https://www.163.com/dy/article/KV4K11GS0514CG7L.html"
+   },
+   "trauma2026": {
+    "s": "填报 06-10 至 06-18",
+    "d": "2026-06-09",
+    "src": "转载",
+    "url": "https://www.163.com/dy/article/KV4K11GS0514CG7L.html"
+   }
+  },
+  {
+   "province": "贵州",
+   "trauma2023": {
+    "s": "参与",
+    "src": "转载",
+    "url": "https://www.163.com/dy/article/KV4K11GS0514CG7L.html"
+   }
+  },
+  {
+   "province": "云南",
+   "trauma2023": {
+    "s": "参与",
+    "src": "转载",
+    "url": "https://www.163.com/dy/article/KV4K11GS0514CG7L.html"
+   }
+  },
+  {
+   "province": "西藏",
+   "trauma2023": {
+    "s": "参与",
+    "src": "转载",
+    "url": "https://www.163.com/dy/article/KV4K11GS0514CG7L.html"
+   }
+  },
+  {
+   "province": "陕西",
+   "trauma2023": {
+    "s": "参与",
+    "src": "转载",
+    "url": "https://www.163.com/dy/article/KV4K11GS0514CG7L.html"
+   }
+  },
+  {
+   "province": "甘肃",
+   "trauma2023": {
+    "s": "参与",
+    "src": "转载",
+    "url": "https://www.163.com/dy/article/KV4K11GS0514CG7L.html"
+   }
+  },
+  {
+   "province": "青海",
+   "trauma2023": {
+    "s": "参与",
+    "src": "转载",
+    "url": "https://www.163.com/dy/article/KV4K11GS0514CG7L.html"
+   },
+   "national": {
+    "s": "运动医学挂网申报公示（第 9 批）",
+    "d": "2026-10-13",
+    "src": "官方",
+    "url": "https://www.qhggzyjy.gov.cn/ggzy/jyxx/001003/001003002/20261013/202610139b33e19556cf466991610c12a24dcf8a.html"
+   }
+  },
+  {
+   "province": "宁夏",
+   "trauma2023": {
+    "s": "参与",
+    "src": "转载",
+    "url": "https://www.163.com/dy/article/KV4K11GS0514CG7L.html"
+   }
+  },
+  {
+   "province": "新疆",
+   "trauma2023": {
+    "s": "参与",
+    "src": "转载",
+    "url": "https://www.163.com/dy/article/KV4K11GS0514CG7L.html"
+   }
+  }
+ ]
+}
